@@ -3,9 +3,6 @@ import Badge from "@/components/badge";
 import {MDX} from "@/components/content/mdx"
 
 export default function LogPost({log}: { log: ChangeLog }) {
-  const posts = allChangeLogs
-    .sort((a, b) => b.date.localeCompare(a.date))
-
   return (
     <article className="md:flex">
       <h2 className="content-date h-full mt-px">
