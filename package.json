@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format-check": "prettier --check \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
@@ -14,6 +16,7 @@
     "contentlayer": "^0.3.4",
     "next": "14.0.2",
     "next-contentlayer": "^0.3.4",
+    "prettier": "^3.1.0",
     "react": "^18",
     "react-dom": "^18",
     "rehype-autolink-headings": "^7.1.0",
