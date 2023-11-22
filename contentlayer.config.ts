@@ -1,4 +1,4 @@
-import {defineDocumentType, makeSource} from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -11,23 +11,23 @@ export const ChangeLog = defineDocumentType(() => ({
   fields: {
     date: {
       type: "string",
-      required: true
+      required: true,
     },
     release: {
       type: "string",
-      required: true
+      required: true,
     },
     title: {
       type: "string",
-      required: true
+      required: true,
     },
     authors: {
       type: "list",
       of: {
         type: "string",
       },
-    }
-  }
+    },
+  },
 }));
 
 export default makeSource({
@@ -45,7 +45,7 @@ export default makeSource({
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
             if (node.children.length === 0) {
-              node.children = [{type: "text", value: " "}];
+              node.children = [{ type: "text", value: " " }];
             }
           },
           onVisitHighlightedLine(node: any) {

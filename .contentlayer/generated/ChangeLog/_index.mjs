@@ -2,5 +2,7 @@
 
 import changeLog__preReleaseMdx from './change-log__pre-release.mdx.json' assert { type: 'json' }
 import changeLog__v0_0_1Mdx from './change-log__v0.0.1.mdx.json' assert { type: 'json' }
+import changeLog__v0_0_2Mdx from './change-log__v0.0.2.mdx.json' assert { type: 'json' }
+import changeLog__v0_0_3Mdx from './change-log__v0.0.3.mdx.json' assert { type: 'json' }
 
-export const allChangeLogs = [changeLog__preReleaseMdx, changeLog__v0_0_1Mdx]
+export const allChangeLogs = [changeLog__preReleaseMdx, changeLog__v0_0_1Mdx, changeLog__v0_0_2Mdx, changeLog__v0_0_3Mdx]

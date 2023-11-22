@@ -1,7 +1,7 @@
 import Link from "next/link";
-import {useMDXComponent} from "next-contentlayer/hooks";
-import {cn} from "@/lib/utils";
-import {JSX} from "react";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import { cn } from "@/lib/utils";
+import { JSX } from "react";
 
 const CustomLink = (props: any): JSX.Element => {
   const href = props.href;
@@ -32,19 +32,25 @@ const components = {
     />
   ),
   code: (props: any) => (
-    <code
-      {...props}
-    />
+    <div className={"shadow-2xl"}>
+      <code {...props} />
+    </div>
   ),
   thead: (props: any) => <thead className="text-lg" {...props} />,
-  Note: (props: any) => (
+  Embed: (props: any) => (
+    <div className={"h-96 w-full shadow-2xl rounded-2xl"}>
+      <iframe {...props} />
+    </div>
+  ),
+  Callout: (props: any) => (
     <div
       className={cn(
-        "mt-4 rounded-md border-l-4 border-gray-500 bg-gray-100 px-4 py-1 text-[0.95rem] leading-[1.4rem]",
+        "mt-4 rounded-md border border-gray-500 bg-gray-100 shadow-lg px-4 py-1 text-[0.95rem] leading-[1.4rem]",
         {
-          "border-yellow-500 bg-yellow-100": props.variant === "warning",
-          "border-blue-500 bg-blue-100": props.variant === "info",
-          "border-green-500 bg-green-100": props.variant === "success",
+          "border-orange-300 bg-orange-100": props.variant === "warning",
+          "border-red-300 bg-red-100": props.variant === "error",
+          "border-blue-300 bg-blue-50": props.variant === "info",
+          "border-green-300 bg-green-50": props.variant === "success",
         },
       )}
       {...props}
@@ -59,7 +65,7 @@ interface MDXProps {
   className?: string;
 }
 
-export function MDX({code, images, className}: MDXProps) {
+export function MDX({ code, images, className }: MDXProps) {
   const Component = useMDXComponent(code);
 
   // const MDXImage = (props: any): null | JSX.Element => {

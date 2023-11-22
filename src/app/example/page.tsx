@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import {useState} from 'react';
+import { useState } from "react";
 
 export default function MyPage() {
   const [showIframe, setShowIframe] = useState(true);
@@ -14,14 +14,8 @@ export default function MyPage() {
         Show Iframe
       </button>
       {showIframe && (
-        <div
-          className="h-[450px] w-80 z-20 bg-white rounded-lg shadow-2xl absolute left-[calc(50%+14px)] bottom-[calc(50%+14px)] origin-bottom-left overflow-hidden border border-gray-100"
-        >
-          <iframe
-            src="/widget"
-            className="h-full w-full"
-          >
-          </iframe>
+        <div className="h-[450px] w-80 z-20 bg-white rounded-lg shadow-2xl absolute left-[calc(50%+14px)] bottom-[calc(50%+14px)] origin-bottom-left overflow-hidden border border-gray-100">
+          <iframe src="/widget" className="h-full w-full"></iframe>
         </div>
       )}
     </div>
