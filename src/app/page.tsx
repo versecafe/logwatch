@@ -4,19 +4,19 @@ import LogPost from "@/components/log-post";
 
 export default function Home() {
   const logs = allChangeLogs.sort((a, b) => {
-      const a_version = a.release.split('.').map(Number);
-      const b_version = b.release.split('.').map(Number);
-      const max_length = Math.max(a_version.length, b_version.length);
-      for (let i = 0; i < max_length; i++) {
-          const a_part = a_version[i] || 0;
-          const b_part = b_version[i] || 0;
-          if (a_part < b_part) {
-              return 1;
-          } else if (a_part > b_part) {
-              return -1;
-          }
+    const a_version = a.release.split(".").map(Number);
+    const b_version = b.release.split(".").map(Number);
+    const max_length = Math.max(a_version.length, b_version.length);
+    for (let i = 0; i < max_length; i++) {
+      const a_part = a_version[i] || 0;
+      const b_part = b_version[i] || 0;
+      if (a_part < b_part) {
+        return 1;
+      } else if (a_part > b_part) {
+        return -1;
       }
-      return 0;
+    }
+    return 0;
   });
 
   return (
