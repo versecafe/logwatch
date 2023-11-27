@@ -1,4 +1,4 @@
-import { allChangeLogs, ChangeLog } from "contentlayer/generated";
+import { ChangeLog } from "contentlayer/generated";
 import Badge from "@/components/badge";
 import { MDX } from "@/components/content/mdx";
 import Authors from "@/components/author";
