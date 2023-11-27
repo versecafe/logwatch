@@ -93,5 +93,26 @@
       "flattenedPath": "change-log/v0.0.4"
     },
     "type": "ChangeLog"
+  },
+  {
+    "date": "November 26, 2023",
+    "release": "0.0.5",
+    "title": "Minor Bug Fix",
+    "authors": [
+      "https://github.com/versecafe"
+    ],
+    "body": {
+      "raw": "\nFixed breaking in change log ordering for logs such as 0.0.19 which would\nhave previously rendered between 0.0.2 and 0.0.1.",
+      "code": "var Component=(()=>{var h=Object.create;var r=Object.defineProperty;var g=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var m=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var p=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),f=(e,t)=>{for(var n in t)r(e,n,{get:t[n],enumerable:!0})},i=(e,t,n,c)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let o of l(t))!x.call(e,o)&&o!==n&&r(e,o,{get:()=>t[o],enumerable:!(c=g(t,o))||c.enumerable});return e};var b=(e,t,n)=>(n=e!=null?h(m(e)):{},i(t||!e||!e.__esModule?r(n,\"default\",{value:e,enumerable:!0}):n,e)),j=e=>i(r({},\"__esModule\",{value:!0}),e);var u=p((C,a)=>{a.exports=_jsx_runtime});var M={};f(M,{default:()=>w,frontmatter:()=>_});var s=b(u()),_={title:\"Minor Bug Fix\",date:\"November 26, 2023\",authors:[\"https://github.com/versecafe\"],release:\"0.0.5\"};function d(e){let t=Object.assign({p:\"p\"},e.components);return(0,s.jsx)(t.p,{children:`Fixed breaking in change log ordering for logs such as 0.0.19 which would\nhave previously rendered between 0.0.2 and 0.0.1.`})}function v(e={}){let{wrapper:t}=e.components||{};return t?(0,s.jsx)(t,Object.assign({},e,{children:(0,s.jsx)(d,e)})):d(e)}var w=v;return j(M);})();\n;return Component;"
+    },
+    "_id": "change-log/v0.0.5.mdx",
+    "_raw": {
+      "sourceFilePath": "change-log/v0.0.5.mdx",
+      "sourceFileName": "v0.0.5.mdx",
+      "sourceFileDir": "change-log",
+      "contentType": "mdx",
+      "flattenedPath": "change-log/v0.0.5"
+    },
+    "type": "ChangeLog"
   }
 ]
